@@ -24,6 +24,12 @@ export default {
 <style>
     .icon-btn {
         border: none;
+        padding: 4px 7px;
+        font-size: 12px;
+    }
+    .icon-btn:hover {
+        background-color: var(--color-background);
+        color: var(--color-text);
     }
     .indicate {
         position: relative;

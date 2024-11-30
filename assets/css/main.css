@@ -1,5 +1,6 @@
 #app {
   padding: 24px 40px 60px 40px;
+  max-width: 1200px;
   font-weight: normal;
 }
   
@@ -20,18 +21,25 @@ h1, h2, h3 {
 }
   
 button {
-  padding: 4px 7px;
-  height: 40px; 
+  height: 44px; 
+  padding: 8px 16px;
+  font-size: 20px;
   background-color: var(--color-background);
   color: var(--color-text);
   border: 2px var(--color-border) solid;
   border-radius: 2px;
   cursor: pointer;
+  transition: 0.2s;
 }
   
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
+  }
+  
+  button:hover {
+    background-color: var(--color-background-alt);
+    color: var(--color-text-alt);
   }
 }
   
