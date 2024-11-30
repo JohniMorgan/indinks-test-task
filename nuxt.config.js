@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'test-tasl',
+    title: 'Тестовое задание (ИНДИНС)',
     htmlAttrs: {
       lang: 'en'
     },
@@ -15,12 +15,15 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/market-image.ico' }
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    // Стилизация основных элементов
+    '@/assets/css/main.css',
+    // Подключение карты цветов
+    '@/assets/css/base.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
