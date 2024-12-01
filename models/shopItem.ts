@@ -5,17 +5,22 @@ export default class ShopItem {
     id: Field<number> = new Field("Идентификатор")
     title: Field<string> = new Field("Название")
     price: Field<number> = new Field("Цена")
+    rate: Field<number> = new Field("Рейтинг")
+    category: Field<string> = new Field("Категория")
     description: Field<string> = new Field("Описание")
     image: string // Изображение не требует подписи
 
     constructor(data: ShopItemType) {
         this.id.set(data.id);
         this.title.set(data.title);
-        this.description.set(data.description);
         this.price.set(data.price);
+        this.rate.set(data.rating.rate);
+        this.category.set(data.category);
+        this.description.set(data.description);
         this.image = data.image;
     }
 
+    get keys() { return ['description', 'category', 'rate'] };
 
 }
 
@@ -31,6 +36,11 @@ export interface ShopItemType {
     id: number,
     title: string,
     price: number,
+    rating: {
+        rate: number,
+        count: number,
+    }
+    category: string,
     description: string,
     image: string,
 }

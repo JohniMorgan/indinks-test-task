@@ -1,7 +1,8 @@
 :root {
     --vt-c-white: #fff;
     --vt-c-dark-green: #275742;
-    --vt-c-carrot: #C95103; 
+    --vt-c-carrot: #C95103;
+    --vt-c-light-gray: #606462;
 }
 /* semantic colors for project / семантическая карта цветов */
 :root {
@@ -11,6 +12,7 @@
     --color-background-alt: var(--vt-c-dark-green);
     --color-text-alt: var(--vt-c-white);
     --color-indication: var(--vt-c-carrot);
+    --color-sign: var(--vt-c-light-gray);
 }
 
 body {

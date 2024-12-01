@@ -1,5 +1,5 @@
 <template>
-    <button class="icon-btn">
+    <button class="icon-btn" @click="$emit('click')">
         <slot><!--Place your icon here!--></slot>
         <div class="indicate" v-if="isCounted">
             {{ count }}
@@ -26,10 +26,13 @@ export default {
         border: none;
         padding: 4px 7px;
         font-size: 12px;
+        background-color: inherit;
+        color: inherit;
     }
+    /*Предотвращаем изменение при наведении*/
     .icon-btn:hover {
-        background-color: var(--color-background);
-        color: var(--color-text);
+        background-color: inherit;
+        color: inherit;
     }
     .indicate {
         position: relative;

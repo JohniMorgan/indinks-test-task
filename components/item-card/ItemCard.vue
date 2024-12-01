@@ -3,6 +3,8 @@
         <img class="card-img" :src="item.image" @click="openDialog">
         <label class="title">{{ item.title.value }}</label>
         <text-button label="Купить" @click="addToCart"/>
+
+        <item-dialog v-show="isDialogOpened" :item="item" @close="closeDialog"/>
     </div>
 </template>
 <script lang="ts">
@@ -27,6 +29,10 @@ export default {
         openDialog() {
             this.isDialogOpened = true;
             console.log('Диалог открывается');
+        },
+        closeDialog() {
+            this.isDialogOpened = false;
+            console.log('Диалог закрывается');
         },
         addToCart() {
             console.log('Товар добавляется в корзину');

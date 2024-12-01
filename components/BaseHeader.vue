@@ -7,7 +7,6 @@
         </nav>
         <icon-button 
             :count="2"
-            @click="() => console.log('Кнопка нажата')"
         >
             <cart-icon/>
         </icon-button>

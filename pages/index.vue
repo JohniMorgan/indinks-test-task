@@ -18,8 +18,13 @@ export default {
         items: [new ShopItem({
             id: 0,
             title: 'Отличная ваза',
-            description: 'Описание отличной вазы',
-            price: 100.2,
+            description: 'Главный помощник на кухне, который «подставит вам плечо» в нужный момент. ',
+            category: 'Кухня',
+            rating: {
+                rate: 4.1,
+                count: 259,
+            },
+            price: 1000,
             image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg'
         }),
         new ShopItem({
@@ -27,6 +32,11 @@ export default {
             title: 'Белый дом',
             description: 'Описание отличной вазы',
             price: 100.2,
+            category: 'Кухня',
+            rating: {
+                rate: 4.1,
+                count: 259,
+            },
             image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg'
         }),
         new ShopItem({
@@ -34,6 +44,11 @@ export default {
             title: 'Кусочек бересты',
             description: 'Описание отличной вазы',
             price: 100.2,
+            category: 'Кухня',
+            rating: {
+                rate: 4.1,
+                count: 259,
+            },
             image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg'
         })]
     }
