@@ -23,9 +23,14 @@ export default {
     .record {
         display: flex;
         flex-direction: column;
-        padding-bottom: 8px;
         font-size: 24px;
+        line-height: 28px;
         font-weight: bold;
+        max-height: 140px;
+        margin-bottom: 8px; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break:break-all;
     }
     .record label {
         color: var(--color-sign);

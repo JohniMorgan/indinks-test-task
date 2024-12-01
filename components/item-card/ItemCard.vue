@@ -3,7 +3,6 @@
         <img class="card-img" :src="item.image" @click="openDialog">
         <label class="title">{{ item.title.value }}</label>
         <text-button label="Купить" @click="addToCart"/>
-
         <item-dialog v-show="isDialogOpened" :item="item" @close="closeDialog"/>
     </div>
 </template>
@@ -44,14 +43,21 @@ export default {
     .item-card {
         display: flex;
         flex-direction: column;
-        width: 380px;
+        width: 100%;
+        min-width: 300px;
+        max-width: 380px;
+        margin-bottom: 32px;
     }
     .card-img {
         cursor: pointer;
-        height: 380px;
-        width: 380px;
+        width: 100%;
+        max-width: 380px;
+        aspect-ratio: 1 / 1;
     }
     .title {
         margin: 16px 0px;
+    }
+    .item-card button {
+        margin-top: auto;
     }
 </style>

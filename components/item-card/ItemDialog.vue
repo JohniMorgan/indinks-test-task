@@ -73,14 +73,19 @@ export default {
         align-items: center;
         background-color: var(--color-background-alt);
         color: var(--color-text-alt);
+    }
+    .dialog-title {
         font-size:32px;
         font-weight: bold;
+        text-overflow:ellipsis;
+        max-height: 44px;
     }
     .modal-content {
         display: grid;
         grid-template-columns: 52% auto;
         grid-template-rows: repeat(2, 50%);
         background-color: var(--color-background);
+        max-height: 80%;
         padding: 40px;
     }
     .modal-content img {

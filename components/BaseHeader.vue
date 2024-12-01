@@ -23,9 +23,6 @@ export default {
             default: () => "Штуки"
         }
     },
-    beforeMount() {
-        console.log(this.$route);
-    }
 }
 </script>
 <style scoped>
