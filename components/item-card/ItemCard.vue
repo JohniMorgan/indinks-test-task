@@ -3,7 +3,7 @@
         <img class="card-img" :src="item.image" @click="openDialog">
         <label class="title">{{ item.title.value }}</label>
         <text-button label="Купить" @click="addToCart"/>
-        <item-dialog v-show="isDialogOpened" :item="item" @close="closeDialog"/>
+        <item-dialog v-show="isDialogOpened" :id="item.id.value" @close="closeDialog"/>
     </div>
 </template>
 <script lang="ts">

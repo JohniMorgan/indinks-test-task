@@ -32,7 +32,7 @@ export default class ShopItem {
 /**
  * Тип данных для модели Продукт
  */
-export interface ShopItemType {
+export type ShopItemType = {
     id: number,
     title: string,
     price: number,
@@ -45,7 +45,7 @@ export interface ShopItemType {
     image: string,
 }
 
-class Field<T> {
+export class Field<T> {
     value: T | null;
     label: string;
 

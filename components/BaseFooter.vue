@@ -31,6 +31,7 @@ export default {
         color: var(--color-text-alt);
         padding: 12px 24px;
         margin-bottom: 12px;
+        height: 124px;
     }
     .navigation {
         display: grid;

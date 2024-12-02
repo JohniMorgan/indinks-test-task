@@ -16,7 +16,7 @@ export default {
     },
     computed: {
         isCounted() : boolean {
-            return this.$props.count && this.$props.count != 0;
+            return (this.$props.count && this.$props.count != 0) as boolean;
         }
     }
 }

@@ -32,14 +32,19 @@ import ItemFieldRecord from './ItemFieldRecord.vue'
 export default {
   components: { IconButton, TextButton, CrossIcon, ItemFieldRecord },
   props: {
-    item: {
-        type: Object as PropType<ShopItem>,
+    id: {
+        type: Number,
         required: true
+    }
+  },
+  computed: {
+    item() : ShopItem {
+        return this.$store.getters['products/getItemById'](this.id);
     }
   },
   methods: {
     addToCartAndExit() {
-        /**TODO Сделать корзину */
+        this.$store.commit('products/addToCart', this.id);
         this.$emit('close');
     }
   }

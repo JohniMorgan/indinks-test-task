@@ -13,4 +13,13 @@ export default {
 }
 </script>
 <style>
+  #app {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 40px 60px 40px;
+    max-width: 1200px;
+    font-weight: normal;
+  }
+  
 </style>

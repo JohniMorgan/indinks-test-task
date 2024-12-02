@@ -12,16 +12,19 @@ import AdsArea from '~/components/advertisting/AdsArea.vue'
 import ItemCard from '~/components/item-card/ItemCard.vue'
 import ShopItem from '~/models/shopItem';
 import ProductsAPI from '~/services/products';
+import {ShopItemType} from '~/models/shopItem'
 import {mapMutations} from 'vuex'
 
 export default {
   components: { AdsArea, ItemCard },
   mounted() {
-    ProductsAPI.getAllProducts().then(res => {
-        res.forEach((product) => {
-            this.add(new ShopItem(product));
+    if (this.$store.getters['products/getList'].length == 0) {
+        ProductsAPI.getAllProducts().then(res => {
+            res.forEach((product: ShopItemType) => {
+                this.add(new ShopItem(product));
+            })
         })
-    })
+    }
   },
   computed: {
     items() : ShopItem[] { 
