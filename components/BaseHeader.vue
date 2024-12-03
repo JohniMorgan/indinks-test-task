@@ -7,6 +7,7 @@
         </nav>
         <icon-button 
             :count="count"
+            @click="redirectToCart"
         >
             <cart-icon/>
         </icon-button>
@@ -21,6 +22,11 @@ export default {
         title: {
             type: String,
             default: () => "Штуки"
+        }
+    },
+    methods: {
+        redirectToCart() {
+            this.$router.push('/cart');
         }
     },
     computed: {

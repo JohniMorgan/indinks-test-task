@@ -1,6 +1,7 @@
 <template>
     <div>
         <ads-area/>
+        <h1 class="page-title">Новинки</h1>
         <v-loader v-if="isLoading" :range="loadingTimeOut"/>
         <div class="items" v-else>
             <item-card v-for="item in items" :key="item.id.value" :item="item"/>

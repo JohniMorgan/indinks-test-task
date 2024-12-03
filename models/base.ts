@@ -11,3 +11,7 @@ export class Field<T> {
         this.value = newValue
     }
 }
+export type Mapping = {
+    label?: string,
+    key: string,
+}

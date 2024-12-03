@@ -5,7 +5,7 @@
         <td> {{ item.count }}</td>
         <td> {{ total }}</td>
         <td>
-            <icon-button>
+            <icon-button @click="$emit('delete')">
                 <delete-icon/>
             </icon-button>
         </td>
@@ -33,7 +33,7 @@ export default {
         total() {
             return this.item.price * this.item.count
         }
-    }
+    },
 }
 </script>
 <style>

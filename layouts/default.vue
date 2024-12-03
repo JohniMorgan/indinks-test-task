@@ -15,7 +15,8 @@ export default {
 <style>
   #app {
     margin: 0 auto;
-    padding: 24px 40px 60px 40px;
+    padding: 24px 40px 24px 40px;
+    min-height: 90vh;
     max-width: 1200px;
     font-weight: normal;
   }

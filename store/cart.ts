@@ -24,5 +24,8 @@ export const mutations = {
             const newProduct = new CartItem(productId);
             state.cart.push(newProduct);
         }
+    },
+    delete(state: NuxtState, id: number) {
+        state.cart.splice(id, 1);
     }
 }

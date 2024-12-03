@@ -1,19 +1,23 @@
 <template>
-    <thead >
+    <thead class="t-header">
         <tr>
-            <th v-for="(label, id) in labels"
+            <th v-for="(item, id) in mapping"
                 :key="id"
                 class="t-header"
                 :class="id == 0 ? 'long' : ''"
-            >{{ label }}</th>
+            >{{ item.label }}</th>
         </tr>
     </thead>
 </template>
 <script lang="ts">
+import { PropType } from 'vue';
+import { Mapping } from '~/models/base';
+
+type TableProp = Array<Mapping>
 export default {
     props: {
-        labels: {
-            type: Array,
+        mapping: {
+            type: [] as PropType<TableProp>,
             required: true,
         }
     }

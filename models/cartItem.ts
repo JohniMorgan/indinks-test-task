@@ -1,4 +1,4 @@
-import { Field } from "./base";
+import { Field, Mapping } from "./base";
 
 export class CartItem {
     productId: number = 0;
@@ -12,7 +12,20 @@ export class CartItem {
         this.count.set(this.count.value + 1)
     }
 
-    static get tableMapping() {
-        return ['Товар', 'Цена, руб', 'Кол-во', 'Сумма', ''];
+    static get tableMapping() : Mapping[] {
+        return [{
+            label: 'Товар',
+            key: 'title'
+        }, {
+            label: 'Цена, руб',
+            key: 'price'
+        }, {
+            label: 'Кол-во',
+            key: 'count'
+        }, {
+            label: 'Сумма',
+            key: 'total'
+        }, 
+        {key: 'control'}];
     }
 }
