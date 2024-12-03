@@ -25,6 +25,13 @@ button {
   cursor: pointer;
   transition: 0.2s;
 }
+
+td, th {
+  padding: 20px 16px;
+}
+table {
+  border-collapse: collapse;
+}
   
 @media (hover: hover) {
   a:hover {

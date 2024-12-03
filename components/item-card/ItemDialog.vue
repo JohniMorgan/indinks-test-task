@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     addToCartAndExit() {
-        this.$store.commit('products/addToCart', this.id);
+        this.$store.commit('cart/add', this.id);
         this.$emit('close');
     }
   }

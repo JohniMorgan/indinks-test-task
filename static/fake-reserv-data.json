@@ -1,0 +1,25 @@
+[{
+    "id":1,
+    "title": "Доска с листьями",
+    "price":1000,
+    "category":"Кухня",
+    "description":"Главный помощник на кухне, который «подставит вам плечо» в нужный момент. ",
+    "rating": {
+        "rate": 4.1,
+        "count": 200
+    },
+    "image":"https://posudajewel.ru/upload/iblock/86b/86bc4e57b9bab9edcfb7532dd78b5cf6.jpg"
+},
+{
+    "id":2,
+    "title": "Веселый куб",
+    "price":5000,
+    "category":"Игрушки",
+    "description":"Удивительный куб-призма, призванный привить вашему ребенку интерес к науке",
+    "rating": {
+        "rate": 4.1,
+        "count": 200
+    },
+    "image":"https://img.joomcdn.net/7c903c1d17cd9df96ce8e1509da001e4973b5042_original.jpeg"
+}
+]

@@ -1,11 +1,13 @@
 <template>
     <div class="cart">
-        
+        <cart-table/>
     </div>
 </template>
 <script>
+import CartTable from '@/components/cart/СartTable'
+
 export default {
-    
+    components: {CartTable}
 }
 </script>
 <style>

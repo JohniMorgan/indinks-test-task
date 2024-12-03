@@ -1,13 +1,14 @@
+import { Field } from "./base"
 /**
  * Модель данных для Продукт
  */
 export default class ShopItem {
-    id: Field<number> = new Field("Идентификатор")
-    title: Field<string> = new Field("Название")
-    price: Field<number> = new Field("Цена")
-    rate: Field<number> = new Field("Рейтинг")
-    category: Field<string> = new Field("Категория")
-    description: Field<string> = new Field("Описание")
+    id: Field<number> = new Field(0, "Идентификатор")
+    title: Field<string> = new Field('' ,"Товар")
+    price: Field<number> = new Field(0, "Цена, руб")
+    rate: Field<number> = new Field(0, "Рейтинг")
+    category: Field<string> = new Field('', "Категория")
+    description: Field<string> = new Field('', "Описание")
     image: string // Изображение не требует подписи
 
     constructor(data: ShopItemType) {
@@ -43,18 +44,4 @@ export type ShopItemType = {
     category: string,
     description: string,
     image: string,
-}
-
-export class Field<T> {
-    value: T | null;
-    label: string;
-
-    constructor(label: string) {
-        this.value = null,
-        this.label = label
-    }
-
-    set(newValue: T | null) : void {
-        this.value = newValue
-    }
 }

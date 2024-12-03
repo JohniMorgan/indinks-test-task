@@ -6,7 +6,7 @@
             <nuxt-link to="/cart">Магазин</nuxt-link>
         </nav>
         <icon-button 
-            :count="2"
+            :count="count"
         >
             <cart-icon/>
         </icon-button>
@@ -23,6 +23,11 @@ export default {
             default: () => "Штуки"
         }
     },
+    computed: {
+        count() {
+            return this.$store.getters['cart/getCartTotalCount'];
+        }
+    }
 }
 </script>
 <style scoped>

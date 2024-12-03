@@ -27,14 +27,12 @@ export default {
     methods: {
         openDialog() {
             this.isDialogOpened = true;
-            console.log('Диалог открывается');
         },
         closeDialog() {
             this.isDialogOpened = false;
-            console.log('Диалог закрывается');
         },
         addToCart() {
-            console.log('Товар добавляется в корзину');
+            this.$store.commit("cart/add", this.item.id.value)
         }
     }
 }
