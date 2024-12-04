@@ -9,9 +9,9 @@
 <script lang="ts">
 import ShopItem from "@/models/shopItem"
 import TextButton from "@/components/buttons/TextButton.vue"
-import { PropType } from 'vue'
+import { defineComponent, PropType } from 'vue'
 
-export default {
+export default defineComponent({
     components: { TextButton },
     props: {
         item: {
@@ -25,17 +25,17 @@ export default {
         }
     },
     methods: {
-        openDialog() {
+        openDialog() : void {
             this.isDialogOpened = true;
         },
-        closeDialog() {
+        closeDialog() : void {
             this.isDialogOpened = false;
         },
-        addToCart() {
+        addToCart() : void {
             this.$store.commit("cart/add", this.item.id.value)
         }
     }
-}
+})
 </script>
 <style scoped>
     .item-card {

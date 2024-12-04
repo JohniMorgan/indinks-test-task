@@ -17,8 +17,14 @@ import ShopItem from '~/models/shopItem';
 import ProductsAPI from '~/services/products';
 import { ShopItemType } from '~/models/shopItem'
 import { mapMutations } from 'vuex'
+import { defineComponent } from 'vue';
 
-export default {
+type TimeLimit = {
+    current: number,
+    limit: number,
+}
+
+export default defineComponent({
   components: { AdsArea, ItemCard, VLoader },
   data() {
     return {
@@ -53,7 +59,7 @@ export default {
     items() : ShopItem[] { 
         return this.$store.state.products.items;
     },
-    loadingTimeOut() {
+    loadingTimeOut() : TimeLimit  {
         return {
             current: this.currentTry,
             limit: this.maxTry
@@ -65,7 +71,7 @@ export default {
         add: 'products/add'
     })
   }
-}
+})
 </script>
 <style>
     .items {

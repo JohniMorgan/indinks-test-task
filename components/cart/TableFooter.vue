@@ -9,18 +9,13 @@
     </tfoot>
 </template>
 <script lang="ts">
-import { PropType } from 'vue'
+import { defineComponent, PropType } from 'vue'
 import { Mapping } from '~/models/base';
-type SummaryInfo = {
-    title?: string,
-    price?: number,
-    count?: number,
-    total?: number,
-}
-
+import { SummaryInfo } from '~/models/base';
+import { getKeyValue } from '~/models/base';
 type Keys = Array<Mapping>;
 
-export default {
+export default defineComponent({
     props: {
         mapping: {
             type: [] as PropType<Keys>,
@@ -34,13 +29,14 @@ export default {
     },
     computed: {
         cellValue() {
-            return (key: string) => {
-                return this.fill[key] != undefined ? this.fill[key] : ''
+            return (key: keyof SummaryInfo) => {
+                const field = getKeyValue<SummaryInfo, keyof SummaryInfo>(key)(this.fill);
+                return field != undefined ? field : ''
             }
         }
     }
 
-}
+})
 </script>
 <style>
     .table-footer {

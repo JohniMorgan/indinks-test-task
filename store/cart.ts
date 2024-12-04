@@ -8,7 +8,7 @@ export const state = () => ({
 export const getters = {
     getCartTotalCount: (state: NuxtState) : number => state.cart.reduce(
         ((acc : number, curVal : CartItem) => acc + curVal.count.value), 0),
-    getCartList: (state: NuxtState) => {
+    getCartList: (state: NuxtState) : Array<CartItem> => {
         return state.cart;
     }
 }

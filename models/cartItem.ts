@@ -23,7 +23,7 @@ export class CartItem {
             label: 'Кол-во',
             key: 'count'
         }, {
-            label: 'Сумма',
+            label: 'Сумма, руб',
             key: 'total'
         }, 
         {key: 'control'}];

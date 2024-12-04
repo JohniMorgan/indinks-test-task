@@ -16,7 +16,8 @@
 <script lang="ts">
 import IconButton from './buttons/IconButton.vue';
 import CartIcon from './icons/CartIcon.vue';
-export default {
+import { defineComponent } from 'vue';
+export default defineComponent({
     components: {IconButton, CartIcon},
     props: {
         title: {
@@ -25,16 +26,16 @@ export default {
         }
     },
     methods: {
-        redirectToCart() {
+        redirectToCart() : void {
             this.$router.push('/cart');
         }
     },
     computed: {
-        count() {
+        count() : number {
             return this.$store.getters['cart/getCartTotalCount'];
         }
     }
-}
+})
 </script>
 <style scoped>
     .header {

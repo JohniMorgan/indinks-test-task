@@ -14,14 +14,14 @@
 <script lang="ts">
 import IconButton from '../buttons/IconButton.vue';
 import DeleteIcon from '../icons/DeleteIcon.vue';
-import { PropType } from 'vue'
+import { defineComponent, PropType } from 'vue'
 interface TableRowModel {
     title: string,
     price: number,
     count: number,
 }
 
-export default {
+export default defineComponent({
     components: { IconButton, DeleteIcon},
     props: {
         item: {
@@ -30,11 +30,11 @@ export default {
         }
     },
     computed: {
-        total() {
+        total() : number {
             return this.item.price * this.item.count
         }
     },
-}
+})
 </script>
 <style>
     

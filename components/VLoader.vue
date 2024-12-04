@@ -5,13 +5,13 @@
     </div>
 </template>
 <script lang="ts">
-import { PropType } from 'vue';
+import { defineComponent, PropType } from 'vue';
 type TimeLimit = {
     current: number,
     limit: number,
 }
 
-export default {
+export default defineComponent({
     props: {
         range: {
             type: Object as PropType<TimeLimit>,
@@ -19,14 +19,14 @@ export default {
         }
     },
     computed: {
-        isShowMessage() {
+        isShowMessage() : boolean {
             return this.range != undefined;
         },
-        message() {
+        message() : string {
             return `Попытка ${this.range?.current} / ${this.range?.limit}`
         }
     }
-}
+})
 </script>
 <style>
 .loading-area {

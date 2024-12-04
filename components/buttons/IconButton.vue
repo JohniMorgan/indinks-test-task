@@ -7,7 +7,9 @@
     </button>
 </template>
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
     props: {
         count: {
             type: Number,
@@ -19,7 +21,7 @@ export default {
             return (this.$props.count && this.$props.count != 0) as boolean;
         }
     }
-}
+})
 </script>
 <style>
     .icon-btn {

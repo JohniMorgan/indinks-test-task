@@ -27,9 +27,9 @@ import ShopItem from '~/models/shopItem'
 import IconButton from '../buttons/IconButton.vue'
 import TextButton from '../buttons/TextButton.vue'
 import CrossIcon from '../icons/CrossIcon.vue'
-import {PropType} from 'vue'
+import {defineComponent, PropType} from 'vue'
 import ItemFieldRecord from './ItemFieldRecord.vue'
-export default {
+export default defineComponent({
   components: { IconButton, TextButton, CrossIcon, ItemFieldRecord },
   props: {
     id: {
@@ -43,12 +43,12 @@ export default {
     }
   },
   methods: {
-    addToCartAndExit() {
+    addToCartAndExit() : void {
         this.$store.commit('cart/add', this.id);
         this.$emit('close');
     }
   }
-}
+})
 </script>
 <style>
     .modal-wrapper {
